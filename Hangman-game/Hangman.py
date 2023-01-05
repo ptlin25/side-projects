@@ -1,7 +1,7 @@
 class Hangman():    
     def __init__(self, word):
         self.word = word
-        self.revealed = ["_" for _ in word]
+        self.revealed = ["_"] * len(word)
         self.stage = 0
     
     def guess(self, letter):
