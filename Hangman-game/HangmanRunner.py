@@ -3,14 +3,11 @@ from Hangman import Hangman
 class HangmanRunner():
     def main():
         word = input("Enter the secret word. \n")
-        
         game = Hangman(word)
-        print(game.revealed)
-        
-        
+        print(game)
+         
         while not game.is_over():
-            g = input("Guess a different letter. \n")
-            game.guess(g)
+            game.guess()
 
         if game.word == "".join(game.revealed):
             print("YOU WIN!")
